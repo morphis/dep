@@ -1,0 +1,18 @@
+name: dep
+version: v0.3.1
+summary: A prototype dependency management tool for Go
+description: |
+  See https://github.com/golang/dep for further details.
+grade: stable
+confinement: classic
+
+apps:
+  dep:
+    command: bin/dep
+
+parts:
+  dep:
+    plugin: go
+    go-importpath: github.com/golang/dep
+    source: https://github.com/golang/dep.git
+    source-tag: $SNAPCRAFT_PROJECT_VERSION
